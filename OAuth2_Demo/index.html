@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OAuth Demo</title>
+    <meta name="Corey Savage" content="Website by: Corey Savage" />
+    <link rel="stylesheet" type="text/css" href="/static/style-v2.3.css">
+</head>
+<body>
+
+	<div class="landing">
+		<h1>Savy's OAuth 2.0 Demo</h1>
+    </div>
+    <div class="info">
+	    <h2>{{ greeting }}{{ userName }}</h2>
+
+	    {% if guest is defined %}
+	    <p>This is a simple website built to demonstrate authenticating with OAuth 2.0. The site implements an OAuth 2.0 Server Side flow without using 
+	    3rd party OAuth libraries. This demo is deployed on the Google Cloud Platform, and built with Python, HTML, and CSS.
+	    </p>
+	    <p>Source Code: <a href="https://github.com/CoreySavage/OAuth2_Demo">https://github.com/CoreySavage/OAuth2_Demo</a></p>
+	    <p>How to use: To authenticate using OAuth 2.0, press the red button below and select the Google account you wish to use for your authentication. 
+	    Authenticated is done through Google+, after authentication is complete you will be able to view some basic information about yourself provided by Google.
+	    No personal information is collected. </p>
+	    <form class="oauth" action="https://oauth2demo-167110.appspot.com" method="post">
+	    		<button>Authenticate With Google</button>
+	    </form>
+	    {% endif %}
+    </div>
+
+</body>
+</html>
+
+

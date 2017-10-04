@@ -1,0 +1,69 @@
+body, html{
+	margin: 0px 0px 0px 0px;
+	height: 100%;
+	background: #BBBBBB;
+}
+
+h1 {
+	color: #890000;
+	font-size: 60px;
+	word-spacing: 10px;
+	margin-top: auto;
+	text-align: center;
+	position: relative;
+	top: 25%;
+	transform: translateY(-25%);
+	-webkit-transform: translateY(-25%);
+	-ms-transform: translateY(-25%);
+	text-shadow:
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
+}
+h2 {
+	color: #5e0000;
+	font-size: 30px;
+	margin-top: 0px;
+	text-align: center;
+}
+
+p {
+	display: block;
+	margin-bottom: 35px;
+	color: #4c0000;
+	font-size: 20px;
+}
+
+.landing {
+	width: 100%;
+	height: 50%;
+	background-image: url("/static/landing_img.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.info{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	text-align:center;
+}
+
+.textBox {
+	width: 60%;
+	margin: auto;
+	text-align:center;
+	max-width: 720px;
+}
+
+button {
+    background-color: #db3236;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
