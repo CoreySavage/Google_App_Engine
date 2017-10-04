@@ -1,0 +1,652 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Marina REST API",
+		"_postman_id": "4301d397-24c2-3e92-b18c-7528844acecd",
+		"description": "Manage data for Boats and Slips",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Homepage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string - API Name\"] = responseBody.has(\"Marina Traffic API\");",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Homepage"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Boat ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"new_boat_id\", JSON.parse(responseBody).id);",
+							"",
+							"tests[\"Correct Name\"] = JSON.parse(responseBody).name === \"Saint Maria\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/boats",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Saint Maria\", \"length\":54, \"classification\":\"yacht\"}"
+				},
+				"description": "Create boat with name, length, and classification\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Test Content",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches new_boat_id\"] = responseBody.has(postman.getEnvironmentVariable(\"new_boat_id\"));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/boats",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Test /boats GET Content matches POST Content"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Boat Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Classification updated\"] = responseBody.has(\"Updated boat type\");",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/boat/{{new_boat_id}}",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"classification\":\"{{updated_classification}}\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm updated boat info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: id\"] = JSON.parse(responseBody).id === (postman.getEnvironmentVariable(\"new_boat_id\"));",
+							"",
+							"tests[\"Test: classification\"] = JSON.parse(responseBody).classification === (postman.getEnvironmentVariable(\"updated_classification\"));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/boat/{{new_boat_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{OAuthToken}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Patch \"at_sea\" - Error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: Error\"] = responseBody.has(\"Error 405 - Method not allowed\");",
+							"",
+							"tests[\"Test: name\"] = responseBody.has(postman.getEnvironmentVariable(\"updated_classification\"));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/boat/{{new_boat_id}}",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"{{updated_name}}\", \"at_sea\":\"True\"}"
+				},
+				"description": "Boats must use departure url to modify \"at_sea\""
+			},
+			"response": []
+		},
+		{
+			"name": "Replace Boat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: id\"] = JSON.parse(responseBody).id === (postman.getEnvironmentVariable(\"new_boat_id\"));",
+							"",
+							"tests[\"Test: name\"] = JSON.parse(responseBody).name === (postman.getEnvironmentVariable(\"replaced_name\"));",
+							"",
+							"tests[\"Test: classification\"] = JSON.parse(responseBody).classification === (postman.getEnvironmentVariable(\"replaced_classification\"));",
+							"",
+							"tests[\"Test: length = null\"] = JSON.parse(responseBody).length === null;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/boat/{{new_boat_id}}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"{{replaced_name}}\", \"classification\":\"{{replaced_classification}}\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"new_slip_id\", JSON.parse(responseBody).id);",
+							"",
+							"tests[\"Test: number\"] = JSON.stringify(JSON.parse(responseBody).number) === (postman.getEnvironmentVariable(\"number\"));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/slips",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"number\":1}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Slip Number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: id\"] = responseBody.has(postman.getEnvironmentVariable(\"new_slip_id\"));",
+							"",
+							"tests[\"Test: number\"] = responseBody.has('\"number\": 2');"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/slip/{{new_slip_id}}",
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"number\":2}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat arrives at slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: slip id\"] = responseBody.has(postman.getEnvironmentVariable(\"new_slip_id\"));",
+							"",
+							"tests[\"Test: boat id\"] = responseBody.has(postman.getEnvironmentVariable(\"new_boat_id\"));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/slip/{{new_slip_id}}/arrival",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"boat_id\":\"{{new_boat_id}}\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Error - Slip already occupied",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"tests[\"Test: Error 403 title\"] = responseBody.has(\"403 Forbidden\");",
+							"",
+							"tests[\"Test: Error 403 messgae\"] = responseBody.has(\"Access was denied to this resource.\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/slip/{{new_slip_id}}/arrival",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"boat_id\":\"{{new_boat_id}}\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Test departure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: current_boat\"] = responseBody.has('\"current_boat\": null');",
+							"",
+							"tests[\"Test: at_sea\"] = responseBody.has('\"at_sea\": true');"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/slip/{{new_slip_id}}/departure",
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Error - No boat to depart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: Error 404 title\"] = responseBody.has(\"404 Not Found\");",
+							"",
+							"tests[\"Test: Error 404 messgae\"] = responseBody.has(\"The resource could not be found.\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/slip/{{new_slip_id}}/departure",
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "departure_history",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: departure_history\"] = JSON.parse(responseBody)[\"departure_history\"][0].departed_boat === (postman.getEnvironmentVariable(\"new_boat_id\"));",
+							"",
+							"tests[\"Test: current_boat\"] = JSON.parse(responseBody).current_boat === null;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/slip/{{new_slip_id}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Replace slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: id\"] = JSON.parse(responseBody).id === (postman.getEnvironmentVariable(\"new_slip_id\"));",
+							"",
+							"tests[\"Test: number\"] = JSON.stringify(JSON.parse(responseBody).number) === (postman.getEnvironmentVariable(\"replaced_number\"));",
+							"",
+							"tests[\"Test: departure_history reset\"] = responseBody.has('\"departure_history\": []');"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/slip/{{new_slip_id}}",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"number\": 100}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Boat arrives at slip - to delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: slip id\"] = responseBody.has(postman.getEnvironmentVariable(\"new_slip_id\"));",
+							"",
+							"tests[\"Test: boat id\"] = responseBody.has(postman.getEnvironmentVariable(\"new_boat_id\"));",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/slip/{{new_slip_id}}/arrival",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"boat_id\":\"{{new_boat_id}}\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Boat at slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: Boat Deleted\"] = responseBody === \"Boat Removed From Database\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/boat/{{new_boat_id}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm boat deleted from /boats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: deleted boat's id does not exist\"] = !(responseBody.has(postman.getEnvironmentVariable(\"new_boat_id\")));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/boats",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create boat for slip deletion",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"slip_delete_boat_id\", JSON.parse(responseBody).id);",
+							"",
+							"tests[\"Correct Name\"] = JSON.parse(responseBody).name === postman.getEnvironmentVariable(\"slip_delete_boat_name\")"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/boats",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"{{slip_delete_boat_name}}\"}"
+				},
+				"description": "Create boat with name\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Slip with boat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: Slip Deleted\"] = responseBody === \"Slip Removed From Database\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/slip/{{new_slip_id}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Slip deleted in /slips",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: deleted slip's id does not exist\"] = !(responseBody.has(postman.getEnvironmentVariable(\"new_slip_id\")));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/slips",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "at_sea changed to true",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: boat id\"] = JSON.parse(responseBody).id === postman.getEnvironmentVariable(\"slip_delete_boat_id\")",
+							"",
+							"tests[\"Test: at_sea = true\"] = JSON.parse(responseBody).at_sea === true"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/boat/{{slip_delete_boat_id}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete remaining boat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test: delete notification\"] = responseBody === \"Boat Removed From Database\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/boat/{{slip_delete_boat_id}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

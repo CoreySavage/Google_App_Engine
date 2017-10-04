@@ -1,0 +1,1495 @@
+{
+	"id": "30411d0b-2180-4b87-8854-1ef60d091a89",
+	"name": "Marina REST API",
+	"allTests": [],
+	"timestamp": "2017-05-01T03:01:54.938Z",
+	"collection_id": "4301d397-24c2-3e92-b18c-7528844acecd",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "d436fc54-db87-b81b-85a2-cda545eb93ec",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "4301d397-24c2-3e92-b18c-7528844acecd",
+		"name": "Marina REST API",
+		"description": "Manage data for Boats and Slips",
+		"order": [
+			"81218359-9d86-23af-e20f-99f3c1b0f8b4",
+			"8a52206e-1abf-f52d-58b8-ce8dd0ecf313",
+			"abd08533-3497-b1a6-29a3-3c37c6cef11c",
+			"ea121277-1df9-5512-dec6-87e83542cd12",
+			"125b1322-9a8a-4f2c-f609-eb87525c91a4",
+			"b9f0cfc0-47bb-9bf0-b4e0-c6177bc2f587",
+			"75da017e-390b-0b26-043f-4236f2bf1fca",
+			"43c7da4e-eb01-cd29-c325-c28da9d6e6a7",
+			"239b83d3-d189-5d4e-d06a-66cdce957898",
+			"2931f1a1-a966-d39c-0fb2-3e06b738c8c3",
+			"fdd49340-c0c2-3526-1a10-4c12c62d012e",
+			"1eab84f7-fb20-bf1a-1731-792428fad7ac",
+			"cb244a3b-5522-c23e-dec1-a5a299e61e89",
+			"8b23a399-051e-1358-f771-0135e090e1d1",
+			"b62560b4-339e-a4f4-d42d-6dfb1ac58731",
+			"2c79f55b-708a-1500-e889-df2ad17d7c9f",
+			"e059cd26-26fd-5fa9-c35d-8723c6a70cd5",
+			"a2237332-8ab0-9c6a-7c25-2bfabfb1f4d3",
+			"6e4fcc30-fbb4-6a62-6d57-d18be6afe875",
+			"b255c568-ed79-85c6-6a42-05975b2b74f7",
+			"8d79e1fc-75e9-efea-e82d-79667dd320de",
+			"45ea14bc-7c40-9f11-1e5d-cca6e02962e3",
+			"7278f120-afc2-7f08-dc2c-ac29471e347f"
+		],
+		"folders": [],
+		"timestamp": 1493364086121,
+		"synced": false,
+		"remote_id": 0,
+		"owner": "1938840",
+		"sharedWithTeam": false,
+		"subscribed": false,
+		"remoteLink": "",
+		"remoteLinkUpdatedAt": null,
+		"public": false,
+		"createdAt": 1493364086121,
+		"updatedAt": 1493607298845,
+		"write": true,
+		"published": false,
+		"favorite": false,
+		"permissions": {},
+		"syncedPermissions": {}
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"enabled": false,
+			"key": "user_gist_length",
+			"type": "text",
+			"value": 0
+		},
+		{
+			"enabled": false,
+			"key": "new_gist_content",
+			"type": "text",
+			"value": "Content added by Postman"
+		},
+		{
+			"enabled": false,
+			"key": "new_gist_id",
+			"type": "text",
+			"value": "d2814646d486f6989ecd5944ee7d9b46"
+		},
+		{
+			"enabled": false,
+			"key": "updated_gist_content",
+			"type": "text",
+			"value": "Gist updated from Postman"
+		},
+		{
+			"enabled": false,
+			"key": "starred_gists_length",
+			"type": "text",
+			"value": 0
+		}
+	],
+	"results": [
+		{
+			"name": "Homepage",
+			"id": "81218359-9d86-23af-e20f-99f3c1b0f8b4",
+			"url": "http://localhost:8080",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Body matches string - API Name": true
+			},
+			"testPassFailCounts": {
+				"Body matches string - API Name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"254"
+			],
+			"allTests": [
+				{
+					"Body matches string - API Name": true
+				}
+			],
+			"time": "254",
+			"totalRequestTime": "254",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create a Boat ",
+			"id": "8a52206e-1abf-f52d-58b8-ce8dd0ecf313",
+			"url": "http://localhost:8080/boats",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Correct Name": true
+			},
+			"testPassFailCounts": {
+				"Correct Name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"241"
+			],
+			"allTests": [
+				{
+					"Correct Name": true
+				}
+			],
+			"time": "241",
+			"totalRequestTime": "241",
+			"iterationResults": {}
+		},
+		{
+			"name": "Test Content",
+			"id": "abd08533-3497-b1a6-29a3-3c37c6cef11c",
+			"url": "http://localhost:8080/boats",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Body matches new_boat_id": true
+			},
+			"testPassFailCounts": {
+				"Body matches new_boat_id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"49"
+			],
+			"allTests": [
+				{
+					"Body matches new_boat_id": true
+				}
+			],
+			"time": "49",
+			"totalRequestTime": "49",
+			"iterationResults": {}
+		},
+		{
+			"name": "Update Boat Info",
+			"id": "ea121277-1df9-5512-dec6-87e83542cd12",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICA_AkM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Classification updated": true
+			},
+			"testPassFailCounts": {
+				"Classification updated": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"91"
+			],
+			"allTests": [
+				{
+					"Classification updated": true
+				}
+			],
+			"time": "91",
+			"totalRequestTime": "91",
+			"iterationResults": {}
+		},
+		{
+			"name": "Confirm updated boat info",
+			"id": "125b1322-9a8a-4f2c-f609-eb87525c91a4",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICA_AkM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: id": true,
+				"Test: classification": true
+			},
+			"testPassFailCounts": {
+				"Test: id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: classification": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"237"
+			],
+			"allTests": [
+				{
+					"Test: id": true,
+					"Test: classification": true
+				}
+			],
+			"time": "237",
+			"totalRequestTime": "237",
+			"iterationResults": {}
+		},
+		{
+			"name": "Patch \"at_sea\" - Error",
+			"id": "b9f0cfc0-47bb-9bf0-b4e0-c6177bc2f587",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICA_AkM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: Error": true,
+				"Test: name": true
+			},
+			"testPassFailCounts": {
+				"Test: Error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"51"
+			],
+			"allTests": [
+				{
+					"Test: Error": true,
+					"Test: name": true
+				}
+			],
+			"time": "51",
+			"totalRequestTime": "51",
+			"iterationResults": {}
+		},
+		{
+			"name": "Replace Boat",
+			"id": "75da017e-390b-0b26-043f-4236f2bf1fca",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICA_AkM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: id": true,
+				"Test: name": true,
+				"Test: classification": true,
+				"Test: length = null": true
+			},
+			"testPassFailCounts": {
+				"Test: id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: classification": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: length = null": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"156"
+			],
+			"allTests": [
+				{
+					"Test: id": true,
+					"Test: name": true,
+					"Test: classification": true,
+					"Test: length = null": true
+				}
+			],
+			"time": "156",
+			"totalRequestTime": "156",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create Slip",
+			"id": "43c7da4e-eb01-cd29-c325-c28da9d6e6a7",
+			"url": "http://localhost:8080/slips",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: number": true
+			},
+			"testPassFailCounts": {
+				"Test: number": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"122"
+			],
+			"allTests": [
+				{
+					"Test: number": true
+				}
+			],
+			"time": "122",
+			"totalRequestTime": "122",
+			"iterationResults": {}
+		},
+		{
+			"name": "Update Slip Number",
+			"id": "239b83d3-d189-5d4e-d06a-66cdce957898",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: id": true,
+				"Test: number": true
+			},
+			"testPassFailCounts": {
+				"Test: id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: number": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"86"
+			],
+			"allTests": [
+				{
+					"Test: id": true,
+					"Test: number": true
+				}
+			],
+			"time": "86",
+			"totalRequestTime": "86",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat arrives at slip",
+			"id": "2931f1a1-a966-d39c-0fb2-3e06b738c8c3",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM/arrival",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: slip id": true,
+				"Test: boat id": true
+			},
+			"testPassFailCounts": {
+				"Test: slip id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: boat id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"173"
+			],
+			"allTests": [
+				{
+					"Test: slip id": true,
+					"Test: boat id": true
+				}
+			],
+			"time": "173",
+			"totalRequestTime": "173",
+			"iterationResults": {}
+		},
+		{
+			"name": "Error - Slip already occupied",
+			"id": "fdd49340-c0c2-3526-1a10-4c12c62d012e",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM/arrival",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"tests": {
+				"Test: Error 403 title": true,
+				"Test: Error 403 messgae": true
+			},
+			"testPassFailCounts": {
+				"Test: Error 403 title": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: Error 403 messgae": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"85"
+			],
+			"allTests": [
+				{
+					"Test: Error 403 title": true,
+					"Test: Error 403 messgae": true
+				}
+			],
+			"time": "85",
+			"totalRequestTime": "85",
+			"iterationResults": {}
+		},
+		{
+			"name": "Test departure",
+			"id": "1eab84f7-fb20-bf1a-1731-792428fad7ac",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM/departure",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: current_boat": true,
+				"Test: at_sea": true
+			},
+			"testPassFailCounts": {
+				"Test: current_boat": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: at_sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"172"
+			],
+			"allTests": [
+				{
+					"Test: current_boat": true,
+					"Test: at_sea": true
+				}
+			],
+			"time": "172",
+			"totalRequestTime": "172",
+			"iterationResults": {}
+		},
+		{
+			"name": "Error - No boat to depart",
+			"id": "cb244a3b-5522-c23e-dec1-a5a299e61e89",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM/departure",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Test: Error 404 title": true,
+				"Test: Error 404 messgae": true
+			},
+			"testPassFailCounts": {
+				"Test: Error 404 title": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: Error 404 messgae": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"85"
+			],
+			"allTests": [
+				{
+					"Test: Error 404 title": true,
+					"Test: Error 404 messgae": true
+				}
+			],
+			"time": "85",
+			"totalRequestTime": "85",
+			"iterationResults": {}
+		},
+		{
+			"name": "departure_history",
+			"id": "8b23a399-051e-1358-f771-0135e090e1d1",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: departure_history": true,
+				"Test: current_boat": true
+			},
+			"testPassFailCounts": {
+				"Test: departure_history": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: current_boat": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"58"
+			],
+			"allTests": [
+				{
+					"Test: departure_history": true,
+					"Test: current_boat": true
+				}
+			],
+			"time": "58",
+			"totalRequestTime": "58",
+			"iterationResults": {}
+		},
+		{
+			"name": "Replace slip",
+			"id": "b62560b4-339e-a4f4-d42d-6dfb1ac58731",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: id": true,
+				"Test: number": true,
+				"Test: departure_history reset": true
+			},
+			"testPassFailCounts": {
+				"Test: id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: departure_history reset": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"85"
+			],
+			"allTests": [
+				{
+					"Test: id": true,
+					"Test: number": true,
+					"Test: departure_history reset": true
+				}
+			],
+			"time": "85",
+			"totalRequestTime": "85",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat arrives at slip - to delete",
+			"id": "2c79f55b-708a-1500-e889-df2ad17d7c9f",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM/arrival",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: slip id": true,
+				"Test: boat id": true
+			},
+			"testPassFailCounts": {
+				"Test: slip id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: boat id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"176"
+			],
+			"allTests": [
+				{
+					"Test: slip id": true,
+					"Test: boat id": true
+				}
+			],
+			"time": "176",
+			"totalRequestTime": "176",
+			"iterationResults": {}
+		},
+		{
+			"name": "Delete Boat at slip",
+			"id": "e059cd26-26fd-5fa9-c35d-8723c6a70cd5",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICA_AkM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: Boat Deleted": true
+			},
+			"testPassFailCounts": {
+				"Test: Boat Deleted": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"157"
+			],
+			"allTests": [
+				{
+					"Test: Boat Deleted": true
+				}
+			],
+			"time": "157",
+			"totalRequestTime": "157",
+			"iterationResults": {}
+		},
+		{
+			"name": "Confirm boat deleted from /boats",
+			"id": "a2237332-8ab0-9c6a-7c25-2bfabfb1f4d3",
+			"url": "http://localhost:8080/boats",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: deleted boat's id does not exist": true
+			},
+			"testPassFailCounts": {
+				"Test: deleted boat's id does not exist": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"35"
+			],
+			"allTests": [
+				{
+					"Test: deleted boat's id does not exist": true
+				}
+			],
+			"time": "35",
+			"totalRequestTime": "35",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create boat for slip deletion",
+			"id": "6e4fcc30-fbb4-6a62-6d57-d18be6afe875",
+			"url": "http://localhost:8080/boats",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Correct Name": true
+			},
+			"testPassFailCounts": {
+				"Correct Name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"67"
+			],
+			"allTests": [
+				{
+					"Correct Name": true
+				}
+			],
+			"time": "67",
+			"totalRequestTime": "67",
+			"iterationResults": {}
+		},
+		{
+			"name": "Delete Slip with boat",
+			"id": "b255c568-ed79-85c6-6a42-05975b2b74f7",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: Slip Deleted": true
+			},
+			"testPassFailCounts": {
+				"Test: Slip Deleted": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"84"
+			],
+			"allTests": [
+				{
+					"Test: Slip Deleted": true
+				}
+			],
+			"time": "84",
+			"totalRequestTime": "84",
+			"iterationResults": {}
+		},
+		{
+			"name": "Confirm Slip deleted in /slips",
+			"id": "8d79e1fc-75e9-efea-e82d-79667dd320de",
+			"url": "http://localhost:8080/slips",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: deleted slip's id does not exist": true
+			},
+			"testPassFailCounts": {
+				"Test: deleted slip's id does not exist": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"33"
+			],
+			"allTests": [
+				{
+					"Test: deleted slip's id does not exist": true
+				}
+			],
+			"time": "33",
+			"totalRequestTime": "33",
+			"iterationResults": {}
+		},
+		{
+			"name": "at_sea changed to true",
+			"id": "45ea14bc-7c40-9f11-1e5d-cca6e02962e3",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICAgggM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: boat id": true,
+				"Test: at_sea = true": true
+			},
+			"testPassFailCounts": {
+				"Test: boat id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: at_sea = true": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"66"
+			],
+			"allTests": [
+				{
+					"Test: boat id": true,
+					"Test: at_sea = true": true
+				}
+			],
+			"time": "66",
+			"totalRequestTime": "66",
+			"iterationResults": {}
+		},
+		{
+			"name": "Delete remaining boat",
+			"id": "7278f120-afc2-7f08-dc2c-ac29471e347f",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICAgggM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test: delete notification": true
+			},
+			"testPassFailCounts": {
+				"Test: delete notification": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"52"
+			],
+			"allTests": [
+				{
+					"Test: delete notification": true
+				}
+			],
+			"time": "52",
+			"totalRequestTime": "52",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 38,
+	"totalFail": 0,
+	"totalTime": 2615,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Homepage",
+			"id": "81218359-9d86-23af-e20f-99f3c1b0f8b4",
+			"url": "http://localhost:8080",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Body matches string - API Name": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create a Boat ",
+			"id": "8a52206e-1abf-f52d-58b8-ce8dd0ecf313",
+			"url": "http://localhost:8080/boats",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Correct Name": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Test Content",
+			"id": "abd08533-3497-b1a6-29a3-3c37c6cef11c",
+			"url": "http://localhost:8080/boats",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Body matches new_boat_id": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Update Boat Info",
+			"id": "ea121277-1df9-5512-dec6-87e83542cd12",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICA_AkM",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Classification updated": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Confirm updated boat info",
+			"id": "125b1322-9a8a-4f2c-f609-eb87525c91a4",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICA_AkM",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: classification": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Patch \"at_sea\" - Error",
+			"id": "b9f0cfc0-47bb-9bf0-b4e0-c6177bc2f587",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICA_AkM",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: Error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: name": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Replace Boat",
+			"id": "75da017e-390b-0b26-043f-4236f2bf1fca",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICA_AkM",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: classification": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: length = null": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create Slip",
+			"id": "43c7da4e-eb01-cd29-c325-c28da9d6e6a7",
+			"url": "http://localhost:8080/slips",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: number": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Update Slip Number",
+			"id": "239b83d3-d189-5d4e-d06a-66cdce957898",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: number": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat arrives at slip",
+			"id": "2931f1a1-a966-d39c-0fb2-3e06b738c8c3",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM/arrival",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: slip id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: boat id": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Error - Slip already occupied",
+			"id": "fdd49340-c0c2-3526-1a10-4c12c62d012e",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM/arrival",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: Error 403 title": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: Error 403 messgae": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Test departure",
+			"id": "1eab84f7-fb20-bf1a-1731-792428fad7ac",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM/departure",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: current_boat": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: at_sea": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Error - No boat to depart",
+			"id": "cb244a3b-5522-c23e-dec1-a5a299e61e89",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM/departure",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: Error 404 title": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: Error 404 messgae": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "departure_history",
+			"id": "8b23a399-051e-1358-f771-0135e090e1d1",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: departure_history": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: current_boat": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Replace slip",
+			"id": "b62560b4-339e-a4f4-d42d-6dfb1ac58731",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: departure_history reset": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat arrives at slip - to delete",
+			"id": "2c79f55b-708a-1500-e889-df2ad17d7c9f",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM/arrival",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: slip id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: boat id": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Delete Boat at slip",
+			"id": "e059cd26-26fd-5fa9-c35d-8723c6a70cd5",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICA_AkM",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: Boat Deleted": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Confirm boat deleted from /boats",
+			"id": "a2237332-8ab0-9c6a-7c25-2bfabfb1f4d3",
+			"url": "http://localhost:8080/boats",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: deleted boat's id does not exist": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create boat for slip deletion",
+			"id": "6e4fcc30-fbb4-6a62-6d57-d18be6afe875",
+			"url": "http://localhost:8080/boats",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Correct Name": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Delete Slip with boat",
+			"id": "b255c568-ed79-85c6-6a42-05975b2b74f7",
+			"url": "http://localhost:8080/slip/aghkZXZ-Tm9uZXInCxIEU2xpcCIMTWFyaW5hX1NsaXBzDAsSBFNsaXAYgICAgICA_AsM",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: Slip Deleted": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Confirm Slip deleted in /slips",
+			"id": "8d79e1fc-75e9-efea-e82d-79667dd320de",
+			"url": "http://localhost:8080/slips",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: deleted slip's id does not exist": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "at_sea changed to true",
+			"id": "45ea14bc-7c40-9f11-1e5d-cca6e02962e3",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICAgggM",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: boat id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test: at_sea = true": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Delete remaining boat",
+			"id": "7278f120-afc2-7f08-dc2c-ac29471e347f",
+			"url": "http://localhost:8080/boat/aghkZXZ-Tm9uZXInCxIEQm9hdCIMTWFyaW5hX0JvYXRzDAsSBEJvYXQYgICAgICAgggM",
+			"time": "2017-05-01T03:01:54.938Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test: delete notification": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
